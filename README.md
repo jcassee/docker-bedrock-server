@@ -5,6 +5,6 @@ server settings in `/minecraft/server.properties`.
 
     $ docker run \
         -v $PWD/worlds:/minecraft/worlds' \
-	-v $PWD/server.properties:/minecraft/server.properties:ro' \
-	-p 19132:19132 \
-	jcassee/bedrock-server
+        -v $PWD/server.properties:/minecraft/server.properties:ro' \
+        -p 19132:19132 \
+        jcassee/bedrock-server
