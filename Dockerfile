@@ -11,7 +11,7 @@ WORKDIR /minecraft
 VOLUME ["/minecraft/worlds"]
 ENV LD_LIBRARY_PATH=.
 CMD ["./bedrock_server"]
-EXPOSE 19132 19133
+EXPOSE 19132/tcp 19132/udp 19133/tcp 19133/udp
 
 # Do this last because it is most likely to change
 RUN curl -s https://minecraft.azureedge.net/bin-linux/bedrock-server-${VERSION}.zip -o /tmp/bedrock-server.zip && \
