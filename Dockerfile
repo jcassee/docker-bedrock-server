@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 MAINTAINER Joost Cassee <joost@cassee.net>
 
-ENV VERSION=1.12.1.1
+ENV VERSION=1.14.30.2
 
 RUN apt-get -qq update && \
     apt-get -qq install -y unzip curl libcurl4 libssl1.0.0 && \
