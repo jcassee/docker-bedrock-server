@@ -1,10 +1,10 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER Joost Cassee <joost@cassee.net>
 
-ENV DOWNLOAD_URL=https://minecraft.azureedge.net/bin-linux/bedrock-server-1.16.210.05.zip
+ENV DOWNLOAD_URL=https://minecraft.azureedge.net/bin-linux/bedrock-server-1.16.210.06.zip
 
 RUN apt-get -qq update && \
-    apt-get -qq install -y unzip curl libcurl4 libssl1.0.0 && \
+    apt-get -qq install -y unzip curl libcurl4 libssl1.1 && \
     rm -rf /var/cache/apt/* /var/lib/apt/lists/*
 
 WORKDIR /server
