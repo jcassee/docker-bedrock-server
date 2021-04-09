@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 MAINTAINER Joost Cassee <joost@cassee.net>
 
-ENV DOWNLOAD_URL=https://minecraft.azureedge.net/bin-linux/bedrock-server-1.16.210.06.zip
+ENV DOWNLOAD_URL=https://minecraft.azureedge.net/bin-linux/bedrock-server-1.16.220.02.zip
 
 RUN apt-get -qq update && \
     apt-get -qq install -y unzip curl libcurl4 libssl1.1 && \
@@ -15,6 +15,7 @@ EXPOSE 19132/tcp 19132/udp 19133/tcp 19133/udp
 # Do this last because it is most likely to change
 RUN curl -s ${DOWNLOAD_URL} -o /tmp/bedrock-server.zip && \
     unzip /tmp/bedrock-server.zip && \
+    chmod +x bedrock_server && \
     rm -f /tmp/bedrock-server.zip
 
 RUN mkdir -p /config /worlds /packs/behavior /packs/resource && \
